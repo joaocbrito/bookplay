@@ -14,11 +14,6 @@
   <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
 </p>
 
-Aplicação desenvolvida durante o [Bootcamp GoStack RocketSeat ](https://rocketseat.com.br/bootcamp) feita em ReactJS para consumir a api do github.
-
-
-
-
 ### Tecnologias utilizadas
 
 - [React.js](https://pt-br.reactjs.org/)
