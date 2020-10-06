@@ -34,3 +34,19 @@ yarn
 # Execute o app
 yarn start
 ```
+
+### Execução 
+
+Primeiramente vou mostrar oxios que foi utilizado para consumir a API.
+
+```js
+import axios from 'axios';
+
+const api = axios.create({
+  baseURL:
+    'https://bmain.bookplay.com.br/parceiros/6BB6F620/recrutamento/top10/acessos',
+});
+
+export default api;
+
+```
