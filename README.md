@@ -17,10 +17,6 @@
 Aplicação desenvolvida durante o [Bootcamp GoStack RocketSeat ](https://rocketseat.com.br/bootcamp) feita em ReactJS para consumir a api do github.
 
 
-<p align="center">
-  <a href="https://ibb.co/ZMWkrpp"><img src="https://i.ibb.co/x7JRbtt/Screenshot-1.png" alt="Screenshot-1" border="0"></a>
-</p>
-
 
 
 ### Tecnologias utilizadas
@@ -30,7 +26,6 @@ Aplicação desenvolvida durante o [Bootcamp GoStack RocketSeat ](https://rocket
 - [React-router-dom](https://www.npmjs.com/package/react-router-dom)
 - [Axios](https://www.npmjs.com/package/axios)
 - [Styled Components](https://styled-components.com/docs/basics)
-- [Polished](https://polished.js.org/)
 
 Também foram utilizadas tecnologias para padronização de código, são elas:
 prettier, eslint e editorconfig.
