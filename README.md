@@ -37,7 +37,7 @@ yarn start
 
 ### Execução 
 
-Primeiramente vou mostrar oxios que foi utilizado para consumir a API.
+Primeiramente vou mostrar axios que foi utilizado para consumir a API.
 
 ```js
 import axios from 'axios';
@@ -48,5 +48,33 @@ const api = axios.create({
 });
 
 export default api;
-
 ```
+
+
+Foi feito a tipagem dos dados vindo do data, não utilizei o "sucess" da requisição, pois opter em usar um try catch de costume.
+
+```js
+interface Livro {
+  CodLivro: number;
+  CodConteudo: number;
+  Nome: string;
+}
+export default api;
+```
+
+
+Usamos o conceito de estados para atribuir os valores da requisição e algumas variáveis de loading.
+
+```js
+  const [livros, setLivros] = useState<Livro[]>([]); 
+  const [isLoading, setIsLoading] = useState(true);
+  const [fail, setFail] = useState(false); 
+```
+
+
+
+
+
+
+
+
