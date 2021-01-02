@@ -57,7 +57,7 @@ const Dashboard: React.FC = () => {
             key={livro.CodLivro}
             // existe um problema para conseguir linkar a página do conteúdo do livro.
             // por exemplo, o livro de codigo 5791, vem sem o zero, porém a página precisa deste 0 para ficar 05791.
-            // a solução encontrar foi: quando o código for meno que 10000, concatenar um 0 antes
+            // a solução encontrada foi: quando o código for menor que 10000, concatenar um 0 antes
             href={`https://bookplay.com.br/conteudo/${
               livro.CodLivro < 10000 ? '0' : ''
             }${livro.CodLivro}`}
