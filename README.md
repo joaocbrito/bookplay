@@ -37,7 +37,7 @@ yarn start
 
 ### Execução 
 
-Primeiramente vou mostrar axios que foi utilizado para consumir a API.
+Primeiramente vou mostrar o axios que foi utilizado para consumir a API.
 
 ```js
 import axios from 'axios';
@@ -51,7 +51,7 @@ export default api;
 ```
 
 
-Foi feito a tipagem dos dados vindo do data, não utilizei o "sucess" da requisição, pois opter em usar um try catch de costume.
+Foi feito a tipagem dos dados recebidos da API, não utilizei o "sucess" da requisição, pois opter em usar um try catch de costume.
 
 ```js
 interface Livro {
@@ -63,7 +63,7 @@ export default api;
 ```
 
 
-Usamos o conceito de estados para atribuir os valores da requisição e algumas variáveis de loading.
+Usei o conceito de estados para atribuir os valores da requisição e algumas variáveis de loading.
 
 ```js
   const [livros, setLivros] = useState<Livro[]>([]); 
@@ -71,8 +71,8 @@ Usamos o conceito de estados para atribuir os valores da requisição e algumas 
   const [fail, setFail] = useState(false); 
 ```
 
-Aqui usamos uma async function para consumir a api e já inserimos os dados dos livros em _livros_.
-Também fazemos o tratamento loading da página e caso acontece o erro 500 de falha, fazemo o tratamento no try catch.
+Aqui foi usado uma async function para consumir a api e já inserimos os dados dos livros em _livros_.
+Também fiz o tratamento loading da página e caso acontecer o erro 500 de falha, fazemos o tratamento no try catch.
 
 
 ```js
@@ -94,10 +94,10 @@ Também fazemos o tratamento loading da página e caso acontece o erro 500 de fa
   }, []);
 ```
 
-Nessa parte é onde é renderizado todo o html e css da página, notamos que tem as tag _<Title>_ e _<Livros>_. Estes componentes criamos ele em styles.ts e importamos no nosso index.tsx. Foi usado a biblioteca styled-components para fazer esta mágica.
-Também foi usado um map para percorres cada livro de _livros_, dessa forma fizemos um link com uma imagem para item retornado da nossa API.
-Podemos notar que alguns códigos estão diferentes da página onde há o conteúdo, isso pode conta que o link está em string e o _CodLivro_
- vem em number, por conta disto, por exemplo, o número vem 5777 mas para encontrar a página do conteúdo precisaria ser 05777. Assim foi feito um if alternário caso o número for menor que 10000, terá um 0 na frente.
+Nessa parte é onde é renderizado todo o html e css da página, notamos que tem as tag _<Title>_ e _<Livros>_. Estes componentes foi criado em styles.ts e importado no index.tsx. Foi usado a biblioteca styled-components para fazer esta mágica.
+Também foi usado um map para percorres cada livro de _livros_, dessa forma foi usado um link com uma imagem para cada item retornado da nossa API.
+Podemos notar que alguns códigos estão diferentes da página onde há o conteúdo, isso acontece porque o link está em string e o _CodLivro_
+ vem em number, por exemplo, o número vem 5777 mas para encontrar a página do conteúdo precisaria ser 05777. Assim foi feito um if alternário caso o número for menor que 10000, terá um 0 na frente.
   
 ```js
   return (
